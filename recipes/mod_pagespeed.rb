@@ -26,6 +26,7 @@ if platform_family?('debian')
 
   package 'mod_pagespeed' do
     source "#{Chef::Config[:file_cache_path]}/mod-pagespeed.deb"
+    provider Chef::Provider::Package::Dpkg 
     action :install
   end
 
